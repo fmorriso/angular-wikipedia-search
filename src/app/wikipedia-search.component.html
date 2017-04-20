@@ -1,7 +1,28 @@
-<div>
-  <h2>Wikipedia Search</h2>
-  <input id="searchTerm" type="text" [formControl]="term">
-  <ul>
-    <li *ngFor="let item of items | async">{{item}}</li>
-  </ul>
+<div class="row">
+  <div class="col-md-3 h3">Wikipedia Search</div>
 </div>
+<div class="row">
+  <div class="col-md-4">
+    <input id="searchTerm" type="text" [formControl]="term">
+  </div>
+</div>
+
+<ng-container *ngIf="(items | async)?.length > 0">
+  <div class="row">
+    <div class="col-md-3 h3">
+      Search Results
+    </div>
+  </div>
+</ng-container>
+
+<ul class="list-unstyled">
+  <ng-container *ngFor="let item of items | async">
+    <div class="row">
+      <div class="col-md-4">
+        <li>{{item}}</li>
+      </div>
+    </div>
+  </ng-container>
+
+</ul>
+
