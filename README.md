@@ -3,12 +3,56 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## References
+The original article can be found at:
+ 
+[Taking Advantage of observables in Angular2](https://blog.thoughtram.io/angular/2016/01/06/taking-advantage-of-observables-in-angular2.html)
 
-[taking-advantage-of-observables-in-angular2](https://blog.thoughtram.io/angular/2016/01/06/taking-advantage-of-observables-in-angular2.html)
+[Part 2](https://blog.thoughtram.io/angular/2016/01/07/taking-advantage-of-observables-in-angular2-pt2.html)
 
-## Example Code
+## Changes required since the article was first published:
+The article referenced above was written in January 2016 and last updated in November 2016 when Angular 2.0 was the current release.  The code was written to use SystemJS script loading.
 
-http://embed.plnkr.co/SIltBL/
+The code in this example was written in April 2017 using Angular-cli andr Angular 4.0.2, which requires a few changes to make it work.  
+
+In addition to the change from using SystemJS to WebPack (which requires no special attention on the part of the developer so long as the components are generated using Angular-cli's ng generate tool) there are some Angular 4.x specific changes needed, which are described below.
+### AppModule
+One of the import statements in file `app.module.ts` needs to change from this:
+```typescript
+import { JsonpModule }         from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
+```
+to this:
+```typescript
+import { FormsModule,
+         ReactiveFormsModule }      from '@angular/forms';
+import {HttpModule, JsonpModule}    from '@angular/http';
+```
+
+### WikipediaService
+
+The following import must be added to file `wikipedia.service.ts:`
+```typescript
+import 'rxjs/add/operator/map';
+```
+
+### WikipediaSearchComponent
+
+The following imports must be added to file `wikipedia-search.component.ts`:
+```typescript
+import { Observable }        from 'rxjs/Observable';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/switchMap';
+```
+
+## Original Example Code for Angular 2.x
+
+### Part 1
+https://plnkr.co/edit/SIltBL
+
+### Part 2
+https://plnkr.co/edit/6nt5HH?
+
 
 ## Development server
 
