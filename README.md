@@ -1,6 +1,6 @@
 # Angular-Wikipedia-Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1 and Angular 4.1.0.
 
 ## References
 The original article can be found at:
@@ -12,7 +12,7 @@ The original article can be found at:
 ## Changes required since the article was first published:
 The article referenced above was written in January 2016 and last updated in November 2016 when Angular 2.0 was the current release.  The code was written to use SystemJS script loading.
 
-The code in this example was written in April 2017 using Angular-cli andr Angular 4.0.2, which requires a few changes to make it work.  
+The code in this example was written in April 2017 using Angular-cli 1.0.1 and Angular 4.1.0, which requires a few changes to make it work.  
 
 In addition to the change from using SystemJS to WebPack (which requires no special attention on the part of the developer so long as the components are generated using Angular-cli's ng generate tool) there are some Angular 4.x specific changes needed, which are described below.
 ### AppModule
