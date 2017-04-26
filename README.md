@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1 and Angular 4.1.0.
 
 ## References
-The original article can be found at:
+The original articles can be found at:
  
 [Taking Advantage of observables in Angular2](https://blog.thoughtram.io/angular/2016/01/06/taking-advantage-of-observables-in-angular2.html)
 
