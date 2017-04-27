@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1 and Angular 4.1.0.
 
+## How To Install and Run
+* Click the green __Clone or download__ button near the top-right of the screen and select **Download ZIP**.
+* (Windows only) Find the ZIP file in Windows Explorer, right-click on it, set the **Unblock** checkbox, hit **Apply** and then hit **OK**.
+* Unzip the file to a directory such as `c:\projects\angular-wikipedia-search`.
+* Open a (recommended for Windows users) PowerShell command prompt or a CMD prompt.
+* Change locations to your project, which in "PowerShell lingo" is `cd c:\projects\angular-wikipedia-search`
+* `npm install`
+* `ng serve --open`
+
+The last command shown above will build the applicatoion and serve it up by automatically opening your default browser to `http://localhost:4200`
+
 ## References
 The original articles can be found at:
  
