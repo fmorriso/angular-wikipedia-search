@@ -8,11 +8,13 @@ import { AppRoutingModule }         from './app-routing.module';
 import { AppComponent }             from './app.component';
 import { WikipediaService }         from './wikipedia.service';
 import { WikipediaSearchComponent } from './wikipedia-search.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WikipediaSearchComponent
+    WikipediaSearchComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
